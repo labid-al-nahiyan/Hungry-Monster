@@ -1,6 +1,8 @@
 const searchMeal=()=>
 {
     document.getElementById("meal-thumbnil").innerHTML=""
+    document.getElementById("meal-details").innerHTML=""
+
 
     const mealName=document.getElementById("text-input").value
 
@@ -43,13 +45,17 @@ const SingleMealThumbnil=element =>
 }
 
 const clickOnMenu =document.getElementById("meal-thumbnil").addEventListener("click",function(event){
+
     document.getElementById("meal-details").innerHTML=""
     const singleMealId=event.target.parentNode.id
     mealDetails(singleMealId)
+    
 })
 
 
 const mealDetails=mealId=>{
+    window.location = "#meal-details"
+
     const mealUrl=`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
     fetch(mealUrl)
     .then(res=>res.json())
@@ -57,7 +63,7 @@ const mealDetails=mealId=>{
         
         const singleMeal=data.meals[0]   
         const mealDetails=`
-            <img src="${singleMeal.strMealThumb}" width="200px" alt="">
+            <img src="${singleMeal.strMealThumb}" width="250px" alt="">
             <h3>${singleMeal.strMeal}</h3>
             <h5>Ingredients</h5>
             <ul>

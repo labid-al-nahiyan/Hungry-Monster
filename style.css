@@ -1,5 +1,5 @@
 body{
-    width: 50%;
+    width: 60%;
     margin: auto ;
     
 }
@@ -35,7 +35,7 @@ body{
     border-radius: 10px;
 }
 .single-meal-thumbnil img{
-    width: 200px;
+    width: 220px;
 }
 .single-meal-thumbnil h4{
     text-align: center;
