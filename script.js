@@ -3,13 +3,13 @@ const searchMeal=()=>
     document.getElementById("meal-thumbnil").innerHTML=""
 
     const mealName=document.getElementById("text-input").value
-    console.log(mealName)
+
     const mealUrl=`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`
-    console.log(mealUrl)    
+       
     fetch(mealUrl)
     .then(res=>res.json())
     .then(data=>{
-        console.log("fetch hoise")
+        
         if(data.meals==null){
             const newDiv=document.createElement('div')
             newDiv.innerHTML="Sorry,Not Found Your Item";
