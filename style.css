@@ -1,0 +1,42 @@
+body{
+    width: 50%;
+    margin: auto ;
+    
+}
+#search-meal{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+#text-input{
+    margin-right: 0;
+    height:35px;
+    width: 300px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(255, 245, 245);
+    padding-left: 10px;
+}
+#btn-style{
+    padding: 5px 15px;
+    background-color: rgb(226, 120, 120);
+    color: white;
+    margin-left: 0px;
+    border: 0px;
+    border-radius: 5px;
+}
+#meal-thumbnil{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.single-meal-thumbnil{
+    background-color: rgb(221, 220, 220);
+    border-radius: 10px;
+}
+.single-meal-thumbnil img{
+    width: 200px;
+}
+.single-meal-thumbnil h4{
+    text-align: center;
+}
